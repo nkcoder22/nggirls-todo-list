@@ -13,4 +13,11 @@ export class InputButtonUnitComponent {
 
   title="Hello World";
 
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
+  }
+  getInputValue(event: Event) {
+    return (event.target as HTMLInputElement).value;
+  }
+
 }
