@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-input-button-unit',
@@ -8,5 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './input-button-unit.component.scss'
 })
 export class InputButtonUnitComponent {
+
+  title="Hello World";
 
 }
