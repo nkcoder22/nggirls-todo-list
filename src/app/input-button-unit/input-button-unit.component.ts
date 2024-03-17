@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -11,10 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class InputButtonUnitComponent {
 
+  @Output() submit: EventEmitter<string> = new EventEmitter<string>();
   title="Hello World";
 
-  changeTitle(newTitle: string) {
-    this.title = newTitle;
+  submitValue(newTitle: string) {
+    this.submit.emit(newTitle);
   }
   getInputValue(event: Event) {
     return (event.target as HTMLInputElement).value;
