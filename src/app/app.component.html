@@ -1,13 +1,6 @@
-<h1>
+<h1 class="app-title">
   Welcome to {{ title }}!
 </h1>
 
-<app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
+<app-list-manager></app-list-manager>
 
-<ul>
-  @for(todoItem of titleList; track todoItem.title) {
-    <li>
-      <app-todo-item [item]="todoItem"></app-todo-item>
-    </li>
-  }
-</ul>

@@ -1,0 +1,11 @@
+<div class="todo-app">
+<app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
+
+<ul>
+  @for(todoItem of titleList; track todoItem.title) {
+    <li>
+      <app-todo-item [item]="todoItem"></app-todo-item>
+    </li>
+  }
+</ul>
+</div>
